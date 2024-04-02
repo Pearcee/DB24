@@ -5,7 +5,7 @@ scopes = ["https://www.googleapis.com/auth/spreadsheets"]
 creds = Credentials.from_service_account_file("credentials.json", scopes=scopes)
 client = gspread.authorize(creds)
 
-sheet_id = "1CpltMvXuPR5kmwP3TeqNQ_-Iqx4th8sDeverfkhu27A"  # "1dBFzUMXbEMDSPuoyDOi6l2gGnDG-fnK1dNt4h8ei_H0"
+sheet_id = "1zgROYpNi4mheCD_SgxnmlDlqq2BsJMmfxytgraVgGcg"  # "1dBFzUMXbEMDSPuoyDOi6l2gGnDG-fnK1dNt4h8ei_H0"
 workbook = client.open_by_key(sheet_id)
 
 values = [
@@ -16,7 +16,7 @@ values = [
 ]
 
 worksheet_list = map(lambda x: x.title, workbook.worksheets())
-new_worksheet_name = "Values"
+new_worksheet_name = "test"
 
 if new_worksheet_name in worksheet_list:
     sheet = workbook.worksheet(new_worksheet_name)
